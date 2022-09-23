@@ -72,6 +72,8 @@ ul {
   width: 70%;
   height: max-content;
   font-size: 1.7vw;
+  color: white;
+  
 }
 
 input {
@@ -83,7 +85,7 @@ input {
 
 }
 
-#input:focus {
+input:focus {
   outline: thin solid;
   border: thin solid;
 }

@@ -2,7 +2,9 @@ import React from "react";
 import "./App.css";
 
 export default function App() {
-  const [todos, setTodos] = React.useState(["item1", "item2", "item3"]);
+  let data = ["Attend stand up", "Feedback session", "Code challenge"];
+
+  const [todos, setTodos] = React.useState(data);
 
   return (
     <>

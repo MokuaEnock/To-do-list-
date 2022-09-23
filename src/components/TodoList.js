@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function App2() {
-  let data = ["Item1", "Item2", "Item3"];
+  let data = ["Attend stand up", "Feedback session", "Code challenge"];
 
   let [todos, setTodos] = useState(data);
 
@@ -29,7 +29,6 @@ function Todolist({ todos }) {
 }
 
 function Button({ setTodos }) {
-  
   function handleSubmit(event) {
     event.preventDefault();
     const todo = event.target.elements.todo.value;
