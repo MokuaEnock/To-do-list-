@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 
 export default function App() {
   const [todos, setTodos] = React.useState(["item1", "item2", "item3"]);
@@ -27,7 +28,6 @@ function TodoList({ todos }) {
 }
 
 function AddTodo({ setTodos }) {
-  
   function handleSubmit(event) {
     event.preventDefault();
     const todo = event.target.elements.todo.value;
