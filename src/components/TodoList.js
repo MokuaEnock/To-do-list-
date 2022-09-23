@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function App() {
-  const [todos, setTodos] = React.useState(["item1", "item2", "item3"]);
+export default function App2() {
+  let data = ["Item1", "Item2", "Item3"];
+
+  let [todos, setTodos] = useState(data);
 
   return (
     <>
-      <TodoCount todos={todos} />
-      <TodoList todos={todos} />
-      <AddTodo setTodos={setTodos} />
+      <Addlist todos={todos} />
+      <Todolist todos={todos} />
+      <Button seTodos={setTodos} />
     </>
   );
 }
 
-function TodoCount({ todos }) {
-  return <div>Total Todos: {todos.length}</div>;
+function Addlist({ todos }) {
+  return <div>The total tasks are: {todos.length}</div>;
 }
 
-function TodoList({ todos }) {
+function Todolist({ todos }) {
   return (
     <ul>
       {todos.map((todo) => (
@@ -26,7 +28,7 @@ function TodoList({ todos }) {
   );
 }
 
-function AddTodo({ setTodos }) {
+function Button({ setTodos }) {
   
   function handleSubmit(event) {
     event.preventDefault();
